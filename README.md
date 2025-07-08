@@ -1,4 +1,4 @@
-A web-based Java EE application built using JSP and Servlets, this project helps manage student records efficiently. It supports key operations such as insertion, deletion, update, and viewing of student details via a simple and user-friendly interface.
+A web-based Java EE application built using JSP and Servlets, this project helps manage student records efficiently. It supports CRUD operations such as insertion, deletion, update, and viewing of student details via a simple and user-friendly interface.
 
 🛠️ Features
 🔍 View existing student records
