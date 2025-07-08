@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+
+  <servlet>
+    <servlet-name>DeleteDemo</servlet-name>
+    <servlet-class>DeleteDemo</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>InsertJava</servlet-name>
+    <servlet-class>InsertJava</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>UpdateJava</servlet-name>
+    <servlet-class>UpdateJava</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ViewJava</servlet-name>
+    <servlet-class>ViewJava</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ViewSpeLoginJava</servlet-name>
+    <servlet-class>ViewSpeLoginJava</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeleteDemo</servlet-name>
+    <url-pattern>/DeleteDemo/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>InsertJava</servlet-name>
+    <url-pattern>/InsertJava/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UpdateJava</servlet-name>
+    <url-pattern>/UpdateJava/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ViewJava</servlet-name>
+    <url-pattern>/ViewJava/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ViewSpeLoginJava</servlet-name>
+    <url-pattern>/ViewSpeLoginJava/*</url-pattern>
+  </servlet-mapping>
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+  </welcome-file-list>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>My secure resources</web-resource-name>
+      <description>Resources to be placed under security control.</description>
+      <url-pattern>/private/*</url-pattern>
+      <url-pattern>/registered/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>guest</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>WebApp</realm-name>
+  </login-config>
+
+  <security-role>
+    <description>The role allowed to access our content</description>
+    <role-name>guest</role-name>
+  </security-role>
+
+</web-app>
